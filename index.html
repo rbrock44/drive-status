@@ -49,15 +49,32 @@
             }
         }
 		
-		function formatTimestamp(timestamp) {
-            const date = new Date(timestamp);
-            const month = String(date.getMonth() + 1).padStart(2, '0'); // Month is 0-indexed
-            const day = String(date.getDate()).padStart(2, '0');
-            const hours = String(date.getHours()).padStart(2, '0');
-            const minutes = String(date.getMinutes()).padStart(2, '0');
-            return `${month}-${day} ${hours}:${minutes}`;
-        }
+		function formatDate(isoString) {
+			const date = new Date(isoString);
 
+			// Month names array to map month index to name
+			const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+			// Format the day with a suffix (st, nd, rd, th)
+			const day = date.getDate();
+			const daySuffix = (day) => {
+				if (day > 3 && day < 21) return 'th'; // Handle 11th, 12th, 13th
+				switch (day % 10) {
+					case 1: return 'st';
+					case 2: return 'nd';
+					case 3: return 'rd';
+					default: return 'th';
+				}
+			};
+
+			const formattedDay = `${day}${daySuffix(day)}`;
+			const month = months[date.getMonth()];
+			const hours = date.getHours().toString().padStart(2, '0'); // Pad with leading zero if needed
+			const minutes = date.getMinutes().toString().padStart(2, '0');
+
+			return `${month} ${formattedDay} ${hours}:${minutes}`;
+		}
+		
         function displayData(results) {
             const container = document.getElementById('statusContainer');
             container.innerHTML = ''; // Clear previous content
@@ -72,7 +89,7 @@
 					&nbsp;&nbsp;
                     <span>${item.DisplayName}</span>
 					&nbsp;&nbsp; - &nbsp;&nbsp;
-                    <span>${formatTimestamp(item.Timestamp)}</span>
+                    <span>${formatDate(item.Timestamp)}</span>
                 `;
                 container.appendChild(div);
             });
