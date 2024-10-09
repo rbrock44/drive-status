@@ -42,7 +42,6 @@
         async function fetchData() {
             try {
                 const response = await fetch('https://raw.githubusercontent.com/rbrock44/drive-status/master/MediaServerConnectionResults.json');
-				console.log(await response.text())
                 const data = await response.json();
                 displayData(data.results); 
             } catch (error) {
