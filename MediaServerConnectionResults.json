@@ -1,23 +1,23 @@
 ﻿{
     "results":  [
                     {
-                        "Status":  "Connected",
-                        "Timestamp":  "2025-01-10T14:30:03",
+                        "Status":  "Not Connected",
+                        "Timestamp":  "2025-01-10T14:45:03",
                         "DisplayName":  "USBC"
                     },
                     {
-                        "Status":  "Connected",
-                        "Timestamp":  "2025-01-10T14:30:03",
+                        "Status":  "Not Connected",
+                        "Timestamp":  "2025-01-10T14:45:03",
                         "DisplayName":  "USBD"
                     },
                     {
                         "Status":  "Not Connected",
-                        "Timestamp":  "2025-01-10T14:30:03",
+                        "Timestamp":  "2025-01-10T14:45:03",
                         "DisplayName":  "USBE"
                     },
                     {
                         "Status":  "Not Connected",
-                        "Timestamp":  "2025-01-10T14:30:03",
+                        "Timestamp":  "2025-01-10T14:45:03",
                         "DisplayName":  "USBF"
                     }
                 ]
