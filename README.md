@@ -1,6 +1,6 @@
 # Drive Status (Retired)
 
-> This holds local drive status information (UP, DOWN) <br/>
+> This holds and displays local drive status information (UP, DOWN) <br/>
 > [Live - Drive Status Website](https://drive-status.ryan-brock.com/)
 
 ---
