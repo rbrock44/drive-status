@@ -34,10 +34,16 @@ This website has been retired for a local configured instance of uptime kuma
 
 * Clone [repo](https://github.com/rbrock44/drive-status)
 
+---
+
 ### Run Locally
 
 Open `index.html` inside a web browser
 
+---
+
 ### Deploy
 
 Github pages in configured in repo to deploy the index.html to the correct url (in the [CNAME](/CNAME))
+
+---
