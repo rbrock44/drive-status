@@ -26,8 +26,6 @@ This website has been retired for a local configured instance of uptime kuma
 
 ## 🛠 Technologies
 
-List the tools, languages, or frameworks used.
-
 - Deployment: `GitHub Pages`
 
 ---
